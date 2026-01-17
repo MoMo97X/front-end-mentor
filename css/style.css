@@ -1,0 +1,98 @@
+@layer fonts {
+  /* league-spartan-300 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "League Spartan";
+    font-style: normal;
+    font-weight: 300;
+    src: url("/fonts/league-spartan-v11-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* league-spartan-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "League Spartan";
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/league-spartan-v15-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* league-spartan-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "League Spartan";
+    font-style: normal;
+    font-weight: 600;
+    src: url("/fonts/league-spartan-v15-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* league-spartan-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "League Spartan";
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/league-spartan-v15-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+}
+
+@layer colors {
+  :root {
+    --c-brown: #9e7f66;
+    --c-black: #111111;
+    --c-white: #ffffff;
+    --c-gray-100: #17192b;
+    --c-gray-300: #242b37;
+    --c-gray-500: #5c6779;
+    --color-background-dar: var(--c-black);
+    --color-text-light: var(--c-white);
+  }
+}
+
+@layer typography {
+  :root {
+    /* 80px to convert to rem divid by 16 */
+    --fs-80: calc(80 / 16 * 1rem);
+    --fs-48: calc(48 / 16 * 1rem);
+    --fs-32: calc(32 / 16 * 1rem);
+    --font-size-h1: var(--fs-32);
+
+    @media (width >= calc(700 / 16 * 1rem)) {
+      --font-size-h1: var(--fs-48);
+    }
+  }
+
+  h1 {
+    font-size: var(--font-size-h1);
+  }
+}
+
+@layer global {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-background-dar);
+    color: var(--color-text-light);
+    font-family: "League Spartan", Arial, Helvetica, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}
