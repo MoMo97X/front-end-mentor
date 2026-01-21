@@ -147,5 +147,9 @@
     @media (width >= calc(700 / 16 * 1rem)) {
       grid-template-columns: 40px 1fr 40px;
     }
+
+    @media (width >= calc(1100 / 16 * 1rem)) {
+      grid-template-columns: 40px 1fr 40px;
+    }
   }
 }
