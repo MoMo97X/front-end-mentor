@@ -20,14 +20,63 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <section class="wrapper">
+    <!-- Start header -->
+    <header class="wrapper header">
+      <a href="/">
+        <img
+          class="logo"
+          src="images/logo.svg"
+          alt="Dine Home Logo"
+          style="width: 130; height: 40"
+        />
+      </a>
+    </header>
+    <!-- End header -->
+    <!-- start main -->
+    <main>
+      <section class="wrapper hero">
+        <h1>Exquisite dining since 1989</h1>
+        <p>
+          Experience our seasonal menu in beautiful country surrounding.Eat the
+          freshest produce from the comfort of our farmhouse.
+        </p>
+        <a href="/booking.html" class="button">Book a Table</a>
+
+        <picture>
+          <source
+            media="(width >= calc(1100 / 16 * 1rem))"
+            srcset="images/homepage/hero-bg-desktop.jpg"
+            width="1536"
+            height="1984"
+          />
+          <source
+            media="(width >= calc(700 / 16 * 1rem))"
+            srcset="images/homepage/hero-bg-tablet@2x.jpg"
+            width="2880"
+            height="1640"
+          />
+          <img
+            src="images/homepage/hero-bg-mobile@2x.jpg"
+            alt="plate with shrimp scampi spaghetti"
+            width="750"
+            height="1496 "
+          />
+        </picture>
+      </section>
+    </main>
+    <!-- End main -->
+    <!-- start footer -->
+    <footer></footer>
+    <!-- End footer -->
+
+    <!--  <section class="wrapper">
       <h1>Hello Can You Hear Me 911!</h1>
-      <h2>we will help you.</h2>
+      <h2 class="full-bleed">we will help you.</h2>
       <h3>and make sure it will be great</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, iure.</p>
       <p class="small">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, iure.
       </p>
-    </section>
+    </section> -->
   </body>
 </html>
