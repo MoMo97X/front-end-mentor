@@ -34,6 +34,7 @@
     <!-- End header -->
     <!-- start main -->
     <main>
+      <!-- start hero section -->
       <section class="wrapper hero">
         <picture class="image full-bleed">
           <source
@@ -62,18 +63,18 @@
         </p>
         <a class="button button" href="#">Book a Table</a>
       </section>
-
+      <!-- end hero section -->
+      <!-- start features section -->
       <section class="wrapper features">
         <div class="feature">
           <img
-            class="hide-mobile"
+            class="feature__pattern hide-mobile"
             src="images/patterns/pattern-curve-top-right.svg"
             alt=""
             width="895"
             height="320"
           />
-
-          <picture class="image full-bleed">
+          <picture>
             <source
               media="(width > calc(1100 / 16 * 1rem))"
               srcset="images/homepage/enjoyable-place-desktop@2x.jpg"
@@ -88,27 +89,28 @@
             />
 
             <img
+              class="feature__image has-shadow"
               src="images/homepage/enjoyable-place-mobile@2x.jpg"
               alt="Landscape with sheep"
               width="654"
               height="800"
             />
           </picture>
-
           <img
+            class="feature__divider"
             src="images/patterns/pattern-divide.svg"
             alt=""
             width="71"
             height="7"
           />
-
-          <h2>Enjoyable place for all the family</h2>
-          <p>
+          <h2 class="feature__title">Enjoyable place for all the family</h2>
+          <p class="feature__descreption">
             our relaxed surrounding make dinig with us a great experience for
             everyone. we can even arrange a tour of the farm before the meal.
           </p>
         </div>
       </section>
+      <!-- end features section -->
     </main>
     <!-- End main -->
     <!-- start footer -->
