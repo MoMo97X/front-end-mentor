@@ -44,11 +44,13 @@
     --c-gray-100: hsl(234, 30%, 13%);
     --c-gray-300: hsl(218, 21%, 18%);
     --c-gray-500: hsl(217, 14%, 42%);
+    --c-gray-700: hsla(0, 0%, 100%, 0.15);
     --color-background-dark: var(--c-black);
     --color-background-light: var(--c-white);
     --color-text-dark: var(--c-black);
     --color-text-light: var(--c-white);
     --color-shadow: hsla(234, 30%, 13%, 0.5);
+    --color-menu-divider: var(--c-gray-700);
   }
 }
 
@@ -169,6 +171,11 @@
 
   .has-shadow {
     box-shadow: 0 75px 100px -50px var(--color-shadow);
+  }
+
+  .bg-dark {
+    background-color: var(--color-background-dark);
+    color: var(--color-text-light);
   }
 }
 
@@ -399,6 +406,99 @@
 
     .feature__descreption {
       max-width: 40ch;
+    }
+  }
+}
+
+@layer highlights {
+  .highlights {
+    padding-block: 72px;
+
+    @media (width >= calc(700 / 16 * 1rem)) {
+      padding-block: 100px;
+      padding-inline: 60px;
+    }
+
+    @media (width >= calc(1100 / 16 * 1rem)) {
+      padding-inline: 0;
+    }
+
+    .highlights__text {
+      display: grid;
+      justify-items: center;
+
+      .highlights__divider {
+        margin-block-end: 36px;
+      }
+
+      h2 {
+        max-width: 20ch;
+        margin-block-end: 13px;
+      }
+
+      p {
+        max-width: 40ch;
+        margin-block-end: 85px;
+      }
+    }
+
+    .highlights__items {
+      display: grid;
+      gap: 24px;
+    }
+
+    .highlights__item {
+      padding-block-end: 56px;
+
+      @media (width >= calc(700 / 16 * 1rem)) {
+        display: grid;
+        grid-template-columns: calc(160 / 16 * 1rem) 64px 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas:
+          "img line headline"
+          "img . description";
+      }
+
+      &:not(:last-child) {
+        border-block-end: 2px solid var(--color-menu-divider);
+      }
+
+      > * {
+        @media (width >= calc(700 / 16 * 1rem)) {
+          text-align: left;
+        }
+      }
+
+      p {
+        grid-area: description;
+
+        @media (width < calc(700 / 16 * 1rem)) {
+          margin-inline: auto;
+          max-width: 32ch;
+        }
+      }
+
+      h3 {
+        grid-area: headline;
+      }
+
+      .highlights__item-image {
+        grid-area: img;
+
+        img {
+          @media (width < calc(700 / 16 * 1rem)) {
+            margin-block-end: 36px;
+          }
+        }
+      }
+
+      .highlights__item-divider {
+        width: 32px;
+        height: 1px;
+        background-color: var(--c-brown);
+        position: relative;
+        top: 10px;
+      }
     }
   }
 }
