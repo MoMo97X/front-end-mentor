@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>femaly dine restaurant - front-end mentor</title>
+    <!-- 
+      // adding the defer attriute to a script tag make the js file load after the page is loaded 
+      // just like putting it at the end of body tag 
+    -->
+    <script src="js/index.js" defer></script>
     <meta
       name="description"
       content="a front end mentor challeng made by coder coder youtube channel"
@@ -16,7 +21,6 @@
       sizes="32x32"
     />
     <!-- adding my styling file -->
-    <!-- <link rel="stylesheet" href="css/all.min.css" /> -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -32,6 +36,7 @@
       </a>
     </header>
     <!-- End header -->
+
     <!-- start main -->
     <main>
       <!-- start hero -->
@@ -173,93 +178,222 @@
 
       <!-- start highlights -->
       <section class="wrapper highlights bg-dark">
-        <div class="highlights__text">
-          <img
-            class="highlights__divider"
-            src="images/patterns/pattern-divide.svg"
-            alt="#"
-          />
-          <h2>A few highlights from our menu</h2>
-          <p>
-            We cater for all dietary requirements, but here's a glimps at some
-            of our dinner's favourites. Out menu is revamped every season.
-          </p>
-        </div>
-        <div class="highlights__items">
-          <!-- 1 -->
-          <div class="highlights__item">
-            <picture class="highlights__item-image">
-              <source
-                media="(width >= calc(700 / 16 * 1rem))"
-                srcset="images/homepage/salmon-desktop-tablet@2x.jpg"
-                width="256"
-                height="192"
-              />
-              <img
-                src="images/homepage/salmon-mobile@2x.jpg"
-                alt=""
-                width="654"
-                height="490"
-              />
-            </picture>
-            <div class="highlights__item-divider"></div>
-            <h3>Seared Salmon Fillet</h3>
-            <p class="small">
-              Our locally sourced salmon served with a refreshing buckwheat
-              summer salad.
+        <div class="highlights__content">
+          <div class="highlights__text">
+            <img
+              class="highlights__divider"
+              src="images/patterns/pattern-divide.svg"
+              alt="#"
+            />
+            <h2>A few highlights from our menu</h2>
+            <p>
+              We cater for all dietary requirements, but here's a glimps at some
+              of our dinner's favourites. Out menu is revamped every season.
             </p>
           </div>
-          <!-- 2 -->
-          <div class="highlights__item">
-            <picture class="highlights__item-image">
-              <source
-                media="(width >= calc(700 / 16 * 1rem))"
-                srcset="images/homepage/beef-desktop-tablet@2x.jpg"
-                width="256"
-                height="192"
-              />
-              <img
-                src="images/homepage/beef-mobile@2x.jpg"
-                alt="beef on a plate with fork"
-                width="654"
-                height="490"
-              />
-            </picture>
-            <div class="highlights__item-divider"></div>
-            <h3>Rosemary Filet Mignon</h3>
-            <p class="small">
-              Our prime beef served to your taste with a delicious choice of
-              seasonal sides.
-            </p>
-          </div>
-          <!-- 3 -->
-          <div class="highlights__item">
-            <picture class="highlights__item-image">
-              <source
-                media="(width >= calc(700 / 16 * 1rem))"
-                srcset="images/homepage/chocolate-desktop-tablet@2x.jpg"
-                width="256"
-                height="192"
-              />
-              <img
-                src="images/homepage/chocolate-mobile@2x.jpg"
-                alt="Chocjlate mousse with cherry"
-                width="654"
-                height="490"
-              />
-            </picture>
-            <div class="highlights__item-divider"></div>
-            <h3>Summer Fruit Chocolate Mousse</h3>
-            <p class="small">
-              Creamy mousse combined with summer fruits and dark chocolate
-              shavings.
-            </p>
+          <div class="highlights__items">
+            <!-- 1 -->
+            <div class="highlights__item">
+              <picture class="highlights__item-image">
+                <source
+                  media="(width >= calc(700 / 16 * 1rem))"
+                  srcset="images/homepage/salmon-desktop-tablet@2x.jpg"
+                  width="256"
+                  height="192"
+                />
+                <img
+                  src="images/homepage/salmon-mobile@2x.jpg"
+                  alt=""
+                  width="654"
+                  height="490"
+                />
+              </picture>
+              <div class="highlights__item-divider hide-mobile"></div>
+              <h3>Seared Salmon Fillet</h3>
+              <p class="small">
+                Our locally sourced salmon served with a refreshing buckwheat
+                summer salad.
+              </p>
+            </div>
+            <!-- 2 -->
+            <div class="highlights__item">
+              <picture class="highlights__item-image">
+                <source
+                  media="(width >= calc(700 / 16 * 1rem))"
+                  srcset="images/homepage/beef-desktop-tablet@2x.jpg"
+                  width="256"
+                  height="192"
+                />
+                <img
+                  src="images/homepage/beef-mobile@2x.jpg"
+                  alt="beef on a plate with fork"
+                  width="654"
+                  height="490"
+                />
+              </picture>
+              <div class="highlights__item-divider hide-mobile"></div>
+              <h3>Rosemary Filet Mignon</h3>
+              <p class="small">
+                Our prime beef served to your taste with a delicious choice of
+                seasonal sides.
+              </p>
+            </div>
+            <!-- 3 -->
+            <div class="highlights__item">
+              <picture class="highlights__item-image">
+                <source
+                  media="(width >= calc(700 / 16 * 1rem))"
+                  srcset="images/homepage/chocolate-desktop-tablet@2x.jpg"
+                  width="256"
+                  height="192"
+                />
+                <img
+                  src="images/homepage/chocolate-mobile@2x.jpg"
+                  alt="Chocjlate mousse with cherry"
+                  width="654"
+                  height="490"
+                />
+              </picture>
+              <div class="highlights__item-divider hide-mobile"></div>
+              <h3>Summer Fruit Chocolate Mousse</h3>
+              <p class="small">
+                Creamy mousse combined with summer fruits and dark chocolate
+                shavings.
+              </p>
+            </div>
           </div>
         </div>
       </section>
       <!-- end highlights -->
+
+      <!-- Start booking -->
+      <section class="wrapper booking">
+        <h2 class="visually-hidden">Booking</h2>
+        <!-- a div container for tabs buttons and tabs panels -->
+        <div class="tabs">
+          <!-- a div for all the tap button that change each tap -->
+          <div role="tablist" aria-label="Select your operating system">
+            <!-- 1 -->
+            <button
+              role="tab"
+              aria-selected="true"
+              aria-controls="panel-1"
+              id="tab-1"
+              tabindex="0"
+            >
+              Family Gathering
+            </button>
+            <!-- 2 -->
+            <button
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-2"
+              id="tab-2"
+              tabindex="-1"
+            >
+              Special Events
+            </button>
+            <!-- 3 -->
+            <button
+              role="tab"
+              aria-selected="false"
+              aria-controls="panel-3"
+              id="tab-3"
+              tabindex="-1"
+            >
+              Social Events
+            </button>
+          </div>
+          <!-- a div for tab panels that contain the content -->
+          <div class="tab-panels">
+            <!-- 1 -->
+            <div
+              id="panel-1"
+              role="tabpanel"
+              tabindex="0"
+              aria-labelledby="tab-1"
+            >
+              <picture class="booking__tap-image">
+                <source
+                  media="(width >= calc(1100 / 16 * 1rem))"
+                  srcset="images/homepage/family-gathering-desktop@2x.jpg"
+                  width="1080"
+                  height="1200"
+                />
+                <source
+                  media="(width >= calc(700 / 16 * 1rem))"
+                  srcset="images/homepage/family-gathering-tablet@2x.jpg"
+                  width="1146"
+                  height="720"
+                />
+                <img
+                  class="Booking__image has-shadow"
+                  src="images/homepage/family-gathering-tablet@2x.jpg"
+                  alt="Group of people eating a meal at a table"
+                  width="652"
+                  height="800"
+                />
+              </picture>
+              <h3>Family Gathering</h3>
+              <p>
+                We love catering for entire families. So please bring everyone
+                along for a special meal with your loved ones. We'll provide a
+                memorable experience for all.
+              </p>
+            </div>
+            <!-- 2 -->
+            <div
+              id="panel-2"
+              role="tabpanel"
+              tabindex="0"
+              aria-labelledby="tab-2"
+              hidden
+            >
+              <picture class="booking__tap-image">
+                <source
+                  media="(width >= calc(1100 / 16 * 1rem))"
+                  srcset="images/homepage/special-events-desktop@2x.jpg"
+                  width="1080"
+                  height="1200"
+                />
+                <source
+                  media="(width >= calc(700 / 16 * 1rem))"
+                  srcset="images/homepage/special-events-tablet@2x.jpg"
+                  width="1146"
+                  height="720"
+                />
+                <img
+                  class="Booking__image has-shadow"
+                  src="images/homepage/special-events-mobile@2x.jpg"
+                  alt="Group of people eating a meal at a table"
+                  width="652"
+                  height="800"
+                />
+              </picture>
+              <h3>Special Events</h3>
+              <p>
+                Wheather it's a romantic dinner or special date you're
+                celebrating with others we'll look after you. we'll be sure to
+                mark your special date with an unforgettable meal.
+              </p>
+            </div>
+            <!-- 3 -->
+            <div
+              id="panel-3"
+              role="tabpanel"
+              tabindex="0"
+              aria-labelledby="tab-3"
+              hidden
+            >
+              <p>How to run this application on Linux</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end booking -->
     </main>
     <!-- End main -->
+
     <!-- start footer -->
     <footer></footer>
     <!-- End footer -->
