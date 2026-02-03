@@ -43,6 +43,8 @@
     --c-white: hsl(0, 0%, 100%);
     --c-gray-100: hsl(234, 30%, 13%);
     --c-gray-300: hsl(218, 21%, 18%);
+    --c-gray-400: hsl(0, 0%, 30%);
+    --c-gray-450: hsl(0, 0%, 30%, 0.5);
     --c-gray-500: hsl(217, 14%, 42%);
     --c-gray-700: hsla(0, 0%, 100%, 0.15);
     --color-background-dark: var(--c-black);
@@ -51,6 +53,8 @@
     --color-text-light: var(--c-white);
     --color-shadow: hsla(234, 30%, 13%, 0.5);
     --color-menu-divider: var(--c-gray-700);
+    --color-tab-active: var(--c-gray-400);
+    --color-tab-inactive: var(--c-gray-450);
   }
 }
 
@@ -61,13 +65,14 @@
     --fs-48: calc(48 / 16 * 1rem);
     --fs-32: calc(32 / 16 * 1rem);
     --fs-20: calc(20 / 16 * 1rem);
+    --fs-17: calc(17 / 16 * 1rem);
     --fs-16: calc(16 / 16 * 1rem);
 
     --font-size-h1: var(--fs-32);
     --font-size-h2: var(--fs-32);
     --font-size-h3: var(--fs-20);
+    --font-size-tap: var(--fs-17);
     --font-size-p: var(--fs-16);
-
     --font-size-p-sm: var(--fs-16);
 
     /* tablet */
@@ -142,6 +147,10 @@
     color: var(--c-gray-300);
     font-family: "League Spartan", Arial, Helvetica, sans-serif;
     overflow-x: hidden;
+  }
+
+  button {
+    font-family: "League Spartan", Arial, Helvetica, sans-serif;
   }
 
   main {
@@ -250,6 +259,17 @@
     &:hover {
       background-color: var(--color-text-light);
       color: var(--color-background-dark);
+    }
+
+    &.solid {
+      background: var(--color-background-dark);
+      color: var(--color-text-light);
+      border: 1px solid var(--color-text-light);
+
+      &:hover {
+        background: var(--color-background-light);
+        color: var(--color-text-dark);
+      }
     }
   }
 }
@@ -536,4 +556,32 @@
 }
 
 @layer booking {
+  .booking {
+    .booking__taps {
+    }
+
+    .booking__tap {
+      border: none;
+      background: none;
+      font-weight: 600;
+      font-size: var(--font-size-tap);
+      line-height: 1.6;
+      letter-spacing: 0.147em;
+      text-transform: uppercase;
+      color: var(--color-tab-inactive);
+
+      &[arai-selected="true"] {
+        color: var(--color-tap-active);
+      }
+    }
+
+    .booking__tappanel {
+    }
+
+    .booking__tappanel__pic {
+    }
+
+    .booking__image {
+    }
+  }
 }
