@@ -269,8 +269,16 @@
       <!-- Start booking -->
       <section class="wrapper booking">
         <h2 class="visually-hidden">Booking</h2>
+
         <!-- a div for all the tap button that change each tap -->
         <div class="tabs">
+          <img
+            class="booking__pattern hide-mobile"
+            src="images/patterns/pattern-curve-top-right.svg"
+            alt="#"
+            width="895"
+            height="320"
+          />
           <!-- tabs button's -->
           <div
             class="booking__taps full-bleed"
@@ -440,9 +448,45 @@
               </div>
             </div>
           </div>
+
+          <img
+            class="booking__line hide-mobile"
+            src="images/patterns/pattern-lines.svg"
+            alt="#"
+            width="160"
+            height="75"
+          />
         </div>
       </section>
       <!-- end booking -->
+
+      <!-- start cta -->
+      <section class="wrapper cta">
+        <picture class="cta_pic">
+          <source
+            media="(media >= calc(1100 / 16 * 1rem))"
+            srcset="images/homepage/ready-bg-desktop@2x.jpg"
+            width="2880"
+            height="480"
+          />
+          <source
+            media="(media >= calc(700 / 16 * 1rem))"
+            srcset="images/homepage/ready-bg-tablet@2x.jpg"
+            width="1536"
+            height="544"
+          />
+          <img
+            class="cta__image"
+            src="images/homepage/ready-bg-mobile@2x.jpg"
+            alt="#"
+            width="750"
+            height="656"
+          />
+        </picture>
+        <h2>Ready to make a reservation</h2>
+        <a href="" class="button">Book a table</a>
+      </section>
+      <!-- end cta -->
     </main>
     <!-- End main -->
 

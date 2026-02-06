@@ -580,11 +580,17 @@
     .booking__pattern {
       max-width: none;
       right: 54%;
+      top: -100px;
+
+      @media (width >= calc(1100 / 16 * 1rem)) {
+        right: 67%;
+      }
     }
 
-    .booking__lines {
-      top: 82px;
-      right: 77%;
+    .booking__line {
+      top: -30px;
+      right: 90%;
+      z-index: 2;
     }
 
     .booking__taps {
@@ -674,12 +680,11 @@
       }
     }
 
-    .booking__tappanel__pic {
-    }
-
     .booking__image {
+      z-index: 100;
+
       @media (width >= calc(1100 / 16 * 1rem)) {
-        max-width: calc(540 / 16 * 1ren);
+        max-width: calc(540 / 16 * 1rem);
       }
     }
 
