@@ -26,6 +26,7 @@
   <body>
     <!-- Start header -->
     <header class="wrapper header">
+      <h2 class="visually-hidden">Header</h2>
       <a href="/">
         <img
           class="logo"
@@ -461,16 +462,16 @@
       <!-- end booking -->
 
       <!-- start cta -->
-      <section class="wrapper cta">
-        <picture class="cta_pic">
+      <section class="wrapper cta bg-dark">
+        <picture class="cta_pic full-bleed">
           <source
-            media="(media >= calc(1100 / 16 * 1rem))"
+            media="(width >= calc(1100 / 16 * 1rem))"
             srcset="images/homepage/ready-bg-desktop@2x.jpg"
             width="2880"
             height="480"
           />
           <source
-            media="(media >= calc(700 / 16 * 1rem))"
+            media="(width >= calc(700 / 16 * 1rem))"
             srcset="images/homepage/ready-bg-tablet@2x.jpg"
             width="1536"
             height="544"
@@ -483,15 +484,38 @@
             height="656"
           />
         </picture>
-        <h2>Ready to make a reservation</h2>
-        <a href="" class="button">Book a table</a>
+        <div class="cta__text">
+          <h2 class="cta__title">Ready to make a reservation?</h2>
+          <a href="" class="cta__btn button">Book a table</a>
+        </div>
       </section>
       <!-- end cta -->
     </main>
     <!-- End main -->
 
     <!-- start footer -->
-    <footer></footer>
+    <footer class="wrapper footer bg-dark">
+      <h2 class="visually-hidden">Footer</h2>
+      <div class="footer__content">
+        <a href="">
+          <img class="logo" src="images/logo.svg" alt="Dine Logo" />
+        </a>
+
+        <div class="footer__text">
+          <div class="footer__location">
+            <p>Marthwaite, Sedburgh</p>
+            <p>Cumbria</p>
+            <a href="">+00 44 123 4567</a>
+          </div>
+
+          <div class="footer__times">
+            <p>Open Times</p>
+            <p>Mon - Fri: 09:00 AM - 10:00 PM</p>
+            <p>Sat - Sun: 09:00 AM - 11:30 PM</p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- End footer -->
   </body>
 </html>
